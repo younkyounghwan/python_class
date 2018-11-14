@@ -11,7 +11,7 @@ student 클래스를 정의한다. 다음 학생에게 줄 학번을 클래스 �
 메쏘드와 같은 레벨에서 변수를 정의하면 클래스 변수가 된다. self가 필요없다.
 """
 class Student:
-    tag = 1 #다음 학생에게 줄 학번, 모든 instance가 공유하여 사용. class varialbe(member)
+    tag = 1 #다음 학생에게 줄 학번, 모든 instance가 공유하여 사용. class variable(member)
     def __init__(self,name, grade=1):
         """
         이름, 학년을 매개변수로 받는다.
