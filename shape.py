@@ -25,45 +25,51 @@ D Triangle, Rectangle 클래스에는 변의 길이를 시계방향으로 list �
 
 class Shape: #도형
 
-    def area(self):
+    def area(self): #넓이
         return 0
 
 
-    def perimeter(self):
+    def perimeter(self): #둘레
         return 0
 
-    def __str__(self):
-        self.name = "<Shape>"
+    def __str__(self): #__str__로 변수타입 변환
+        self.name = "<Shape>" #도형
         s = self.name
-        s = s + " 넓이: " + str(Shape.area(self)) + " 둘레: " + str(Shape.perimeter(self))
+        s = s + " 넓이: " + str(Shape.area(self)) + " 둘레: " + str(Shape.perimeter(self)) #출력 형식
         return "{}".format(s)
 
 
 class Circle: #원
     def __init__(self,r,pi=3.1415):
+        """
+
+        :param r: 반지름
+        :param pi: 3.1415
+        """
         self.r = r
         self.pi = pi
-        self.name = "Circle"
+        self.name = "Circle" #도형
 
 
-    def area(self):
-        Shape.area(self)
+    def area(self): #넓이
+
         return (self.r**2) * self.pi
 
 
-    def perimeter(self):
-        Shape.perimeter(self)
+    def perimeter(self): #둘레
+
         return 2 * self.r * self.pi
 
     def getRadius(self,pi=3.1415):
         self.pi = pi
         return pi
 
-    def __str__(self):
+    def __str__(self): #__str__로 변수타입 변환
 
 
         s = ""
         s = s + "<" + str(self.name) +">" + " 넓이: " + str(Circle.area(self)) + " 둘레: " + str(Circle.perimeter(self))
+        #출력 형식
         return "{}".format(s)
 
 
@@ -79,14 +85,14 @@ class Rectangle: #직사각형
         """
         self.n = n
         self.d = d
-        self.name = "Rectangle"
-    def area(self):
-        Shape.area(self)
+        self.name = "Rectangle" #도형
+    def area(self): #넓이
+
         return self.n*self.d
 
 
-    def perimeter(self):
-        Shape.perimeter(self)
+    def perimeter(self): #둘레
+
 
 
         return 2 * (self.n + self.d)
@@ -103,7 +109,7 @@ class Rectangle: #직사각형
         l.append(self.d)
         l.append(self.n)
         return l
-    def __str__(self):
+    def __str__(self): #__str__로 변수타입 변환
 
         s = ""
         s = s + "<" + str(self.name) + ">" + " 넓이: " + str(Rectangle.area(self)) + " 둘레: " + str(Rectangle.perimeter(self))
@@ -126,13 +132,13 @@ class Triangle: #삼각형
         self.d = d
         self.name = "Triangle"
 
-    def area(self):
-        Shape.area(self)
+    def area(self): #넓이
+
         return self.n * self.d / 2
 
 
-    def perimeter(self):
-        Shape.perimeter(self)
+    def perimeter(self): #둘레
+        
         return self.n + self.m + self.o
 
 
@@ -142,17 +148,18 @@ class Triangle: #삼각형
     def getWidth(self):
         return Triangle.area(self)
 
-    def getSides(self):
-        l = []
-        l.append(self.n)
+    def getSides(self): #리스트 설정 후 각 변수 추가
+        l = [] # 리스트
+        l.append(self.n) #추가
         l.append(self.m)
         l.append(self.o)
         return l
 
-    def __str__(self):
+    def __str__(self): #__str__로 변수타입 변환
 
         s=""
         s = s + "<" + str(self.name) + ">" + " 넓이: " + str(Triangle.area(self)) + " 둘레: " + str(Triangle.perimeter(self))
+
         return "{}".format(s)
 
 """
@@ -186,5 +193,5 @@ l.append(r)
 
 for i in range(0,3):
     print(l[i])
-    c.getRadius()
+    #getRadius() #오류가 나므로 주석 처리
 
