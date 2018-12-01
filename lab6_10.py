@@ -15,21 +15,28 @@ print(re.search("\s",s7))
 # search first time where space doesn't appears in s7
 print(re.search("\S",s7))
 
-#search where 'href=' is in s7 and s8.
+print("0===================")
+#search where 'href =' is in s7 and s8.
 #because of searching one pattern in each string, use search after compile
-r = re.compile('href=')
+r = re.compile("href =")
 print(r.search(s7))
 print(r.search(s8))
 
-# search where 'href=' is in s7, not consider space surrounding =
+print("1===================")
+
+# search where 'href =' is in s7, not consider space surrounding =
 r = re.compile("href\s*=\s*")
 print(r.search(s7))
 print(r.search(s8))
+
+print("2===================")
 
 #using group
 r = re.compile("href\s*=\s*\"")
 result = r.search(s7)
 print(result.group()) #return matched group
+
+print("3===================")
 
 # split by =
 print(re.split("=",s8))
@@ -38,16 +45,14 @@ print(re.split("=",s8))
 print(re.sub("e+","i",s7))
 
 # return all matched string by list
-print(re.findall)("\d",s5) #[1,2,3,4]
+print(re.findall("\d",s5)) #[1,2,3,4]
+
+print("4===================")
 
 #split two subgroup not consider surrounded = space in s7
-r= re.complie("(href\s*=\s*)(\".*\")") #to split subgroup use ()
+r= re.compile("(href\s*=\s*)(\".*\")") #to split subgroup use ()
 result = r.search(s8)
 print(result.group(0)) # 0 is all matched. default is 0
 print(result.group(1)) # 1 is part matched first ()
 print(result.group(2)) # 2 is part matched second ()
 print(result.groups()) # return subgroup by tuple
-
-
-
-

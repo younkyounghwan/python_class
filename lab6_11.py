@@ -7,8 +7,8 @@
 """
 import re
 """
-1. comlie a in apple
-2. comlie b in apple
+1. compile a in apple
+2. compile b in apple
 3. 정규식을 이용하여, 사용자가 입력한 영어 문장에서 a,e,i,o,u가 포함되어 있는지 찾아서 출력하시오. 만족하는 첫번째 만 출력한다.
 <입력> This is a test
 """
@@ -30,6 +30,10 @@ B. 출력 예:
 5000
 
 """
+s = "2017년 3월 8일 5000원"
+r = re.compile("\d")
+result = r.search(s)
+print(result.findall())
 
 """
 10. 입력된 문장에서 <이후에 나오는 단어들을 출력하라.
