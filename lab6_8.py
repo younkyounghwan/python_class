@@ -26,7 +26,7 @@ print(r.search(s2))
 print(r.search(s3))
 
 print("3 ======================================")
-r = re.compile("[^te]") # find case of not "abc"
+r = re.compile("[^te]") # find case of not "te"
 print(r.search(s))
 print(r.search(s2))
 print(r.search(s3))

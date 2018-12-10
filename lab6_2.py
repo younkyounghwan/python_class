@@ -17,7 +17,6 @@ class coordinate():
 
     """
     좌표를 표현하는 클래스
-
     """
     def __init__(self,x,y):
         """
@@ -53,5 +52,3 @@ c1 = coordinate(10,9)
 print("거리: %.2f"%c.distance(origin)) #origin이 self, c가 other에 전달됨
 print("거리: %.2f"%c1.distance(c)) #c1이 self c가 other에 전달됨
 print("거리: %.2f"%coordinate.distance(c1, origin)) #클래스 이름과 함꼐 메소드 호출도 가능. 이 때는 self에 해당하는 매개변수를 보내야 한다.
-
-

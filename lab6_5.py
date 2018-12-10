@@ -71,8 +71,6 @@ class Student(Person): #Student 클래스는 Person클래스를 계승한다.
 
         :return: 문자열
         """
-
-    def __str__(self):
         s = Person.__str__(self) #Person class에 __str__를 먼저 호출한 후 문자열 연결 예정
         s = s + " 학교: " + self.school + " 학년: " + str(self.grade) + " 학번: " + str(self.snum)
         return "{}".format(s)

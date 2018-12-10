@@ -12,7 +12,7 @@ s8 = 'href ="C:\Python34\Kim.jpg"'
 # search where space appears in s7
 print(re.search("\s",s7))
 
-# search first time where space doesn't appears in s7
+# search first time where white space doesn't appears in s7
 print(re.search("\S",s7))
 
 print("0===================")

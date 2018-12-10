@@ -10,8 +10,8 @@
 import re
 sum = 0
 while True:
-    x = input()
-    r = re.compile("^[0-9]+$")
+    x = input("입력: ")
+    r = re.compile("^\d+$")
     if r.search(x) == None:
         print("숫자가 아닙니다.")
         continue

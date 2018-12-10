@@ -13,12 +13,20 @@ import re
 <입력> This is a test
 """
 s1 = "apple"
-r = re.compile(s1)
+print("1============")
 
+print(re.search("[a]",s1))
+print(re.search("[b]",s1))
+print(re.search("[aeiou]",s1))
+
+print("2============")
 """
 4. 입력한 단어가 a로 시작하는 지 확인
 5. 입력한 단어가 e로 끝나는 지 검사
 """
+x = input()
+print(re.search("^a",x))
+print(re.search("e$",x))
 
 """
 7. 입력된 문장에서 숫자부분을 모두 출력하라.
@@ -31,11 +39,16 @@ B. 출력 예:
 
 """
 s = "2017년 3월 8일 5000원"
-r = re.compile("\d")
-result = r.search(s)
-print(result.findall())
+print("3============")
+r = re.findall("\d+",s)
+for i in r:
+    print(i)
 
 """
 10. 입력된 문장에서 <이후에 나오는 단어들을 출력하라.
 A. 입력 예: <2015> <김일수> <성공회대학교>
 """
+x = input()
+r = re.findall("\w+",x)
+for i in r:
+    print(i)

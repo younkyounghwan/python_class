@@ -1,10 +1,8 @@
 """
 쳅터: day 6
 주제: class
-
 문제:
 fraction 클래스는 애트리뷰트로 numer(분자)와 denom(분모)를 가진다. 초기화하는 메쏘드를 정의하라.
-
 작성자: 윤경환
 작성일: 18 10 23
 """
@@ -17,7 +15,6 @@ class Fraction:
         :param n: 분자에 해당하는 값
         :param d: 분모에 해당하는 값
         """
-
         self.numer=n
         self.denom=d
 
@@ -63,7 +60,7 @@ class Fraction:
 #실행코드 시작
 
 half = Fraction(1,2) #1/2 분수객체 생성 half에 저장
-                     # class Fraction의 __init____메쏘드가 호출됨
+                     # class Fraction의 __init__메쏘드가 호출됨
 half.print() #half가 self 매개변수에 직접 전달된다.
 
 f1 = Fraction(2,7)

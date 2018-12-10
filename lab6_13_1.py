@@ -10,7 +10,7 @@
 sum = 0
 while True:
     try:
-        x = int(input()) #int로 변환되는 과정에서 valueerror 발생 시 except에 반환됨
+        x = int(input()) #int로 변환되는 과정에서 ValueError 발생 시 except에 반환됨
         for i in range(1,x+1):
             sum += i
         break

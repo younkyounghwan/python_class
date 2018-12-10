@@ -44,6 +44,8 @@ print(re.search("[a-zA-Z0-9]",s5))
 
 print("6 ======================================")
 
+#test
+print(re.match("[pP]","PpP"))
 
 #search number in s5
 print(re.search("[0-9]",s5))
@@ -54,9 +56,10 @@ print(re.search("[A-Z]",s5))
 #search lower alphbet in s5
 print(re.search("[a-z]",s5))
 
-#search location of \ in s6
-print(re.search("[\\\\]",s6))
+#search location of \ and " in s6
+print(re.search("\"",s6))
+print(re.search("\\\\",s6))
 
 # print escape string
 print(s7)
-print(re.search("\\\\",s7)) #if you want to
+print(re.search("\\\\",s7)) #if you want to express "\", specify "\\\\"

@@ -24,6 +24,7 @@ class Student:
         self.snum =  Student.tag
         Student.tag += 1
     def __str__(self):
+
         s = "학번:"
         s = s + str(self.snum) + " 이름:" +self.name + " 학년:" +str(self.grade)
         return "{}".format(s)
@@ -55,7 +56,6 @@ class Student:
         :return: boolean
         """
 
-
         a = self.name
         b = o.name
 
@@ -64,12 +64,12 @@ class Student:
         else:
             return False
 # 실행부 시작
-# 학생 인스턴스 2개 생성
+# 학생 인스턴스 3개 생성
 s1 = Student("김일수", 4)
 s2 = Student("김이수", 2)
 s3 = Student("김삼수")
 print("===진급 전 출력===")
-#2개의 학생 인스턴스 값을 출력
+#3개의 학생 인스턴스 값을 출력
 print(s1)
 print(s2)
 print(s3)
@@ -80,7 +80,7 @@ s2.upgrade()
 #s3의 학년을 2학년 높인다. (매개변수 보내기)
 s3.upgrade(2)
 print("\n==진급 후 출력===")
-#집급 후의 학생 정보
+#진급 후의 학생 정보
 print(s1)
 print(s2)
 print(s3)
